@@ -124,7 +124,301 @@
     </datasource>
   </datasources>
   <worksheets>
-    <worksheet name='Sheet 1'>
+    <worksheet name='Median Mortality By Month'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Full Data (Germ Theory of Disease)' name='federated.1ua3zdk1f6dsq118yzoxf1wphv0h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ua3zdk1f6dsq118yzoxf1wphv0h'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Notes]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Rate (%)]' role='measure' type='quantitative' />
+            <column-instance column='[Rate (%)]' derivation='Median' name='[med:Rate (%):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Notes]' derivation='None' name='[none:Notes:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rate (%)]' derivation='Sum' name='[sum:Rate (%):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month-Trunc' name='[tmn:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <text column='[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[med:Rate (%):qk]</rows>
+        <cols>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[mn:Date:ok]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>Notes: </run>
+              <run bold='true'>&lt;[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]&gt;</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Handwashing policy instituted mid-May&quot;</value>
+                    <value>12.244897959999999</value>
+                    <value>#1847-05-01 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878'>Notes: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;strict controls enforced on students&apos; negligent hand-wash&quot;</value>
+                    <value>3.5335689050000001</value>
+                    <value>#1848-01-01 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878'>Notes: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Semmelweis&apos; employment terminated&quot;</value>
+                    <value>4.926108374</value>
+                    <value>#1849-03-01 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{958627A4-CFA2-4518-8EFE-86693A129189}' />
+    </worksheet>
+    <worksheet name='Median Mortality Rate by Month (color)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Full Data (Germ Theory of Disease)' name='federated.1ua3zdk1f6dsq118yzoxf1wphv0h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ua3zdk1f6dsq118yzoxf1wphv0h'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Notes]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Rate (%)]' role='measure' type='quantitative' />
+            <column-instance column='[Rate (%)]' derivation='Avg' name='[avg:Rate (%):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month' name='[mn:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Notes]' derivation='None' name='[none:Notes:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rate (%)]' derivation='Sum' name='[sum:Rate (%):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Month-Trunc' name='[tmn:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[yr:Date:ok]' />
+              <text column='[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[avg:Rate (%):qk]</rows>
+        <cols>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[mn:Date:ok]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>Notes: </run>
+              <run bold='true'>&lt;[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]&gt;</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Handwashing policy instituted mid-May&quot;</value>
+                    <value>12.244897959999999</value>
+                    <value>#1847-05-01 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878'>Notes: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;strict controls enforced on students&apos; negligent hand-wash&quot;</value>
+                    <value>3.5335689050000001</value>
+                    <value>#1848-01-01 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#787878'>Notes: </run>
+              <run bold='true' fontalignment='0'>&lt;[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]&gt;</run>
+              <run fontalignment='0'>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[sum:Rate (%):qk]</field>
+                      <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[tmn:Date:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Semmelweis&apos; employment terminated&quot;</value>
+                    <value>4.926108374</value>
+                    <value>#1849-03-01 00:00:00#</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{76ACB126-EB13-448D-8C6E-0F669A2C0893}' />
+    </worksheet>
+    <worksheet name='Mortality Rate over Time'>
       <table>
         <view>
           <datasources>
@@ -270,7 +564,7 @@
     </worksheet>
   </worksheets>
   <windows saved-dpi-scale-factor='1.25' source-height='37'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' name='Mortality Rate over Time'>
       <cards>
         <edge name='left'>
           <strip size='128'>
@@ -300,9 +594,252 @@
       </viewpoint>
       <simple-id uuid='{3B47A4DD-74DC-4840-88C3-E721847CB8BC}' />
     </window>
+    <window class='worksheet' maximized='true' name='Median Mortality Rate by Month (color)'>
+      <cards>
+        <edge name='left'>
+          <strip size='189'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='24'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[yr:Date:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]</field>
+            <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{47D5F447-A82C-413D-9267-B8F2A155639A}' />
+    </window>
+    <window class='worksheet' name='Median Mortality By Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='128'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='24'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ua3zdk1f6dsq118yzoxf1wphv0h].[none:Notes:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B43357E0-D155-4569-9B09-77D53CB79B8F}' />
+    </window>
   </windows>
   <thumbnails>
-    <thumbnail height='192' name='Sheet 1' width='192'>
+    <thumbnail height='192' name='Median Mortality By Month' width='192'>
+      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
+      r5T/Pz7SP0sjzo1HAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Median Mortality Rate by Month (color)' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAASdklEQVR4nO3d6XcbZZbH8e8tWfIm2ZKdxHYITSBJE0LTDXTTkPQyPXR3BuYM8wfMXzhv
+      5gxvmF7m9DQhTQiQxXa8xfsi77ItWbaWKlU988JxMCGLvEglqe7nhOPYsV0XqX6quqV6nkeM
+      MQalAsryuwCl/KQBUIGmAVCBpgFQgaYBUIF27ADoRSRVz44dAM/zTqIOpXyhp0Aq0DQAKtA0
+      ACrQNAAq0DQAKtA0ACrQNAAq0DQAKtA0ACrQNAAq0DQAKtA0ACrQNAAq0DQAKtA0ACrQNAAq
+      0DQAKtBeGADjeWxubWGMx8LcLHbJY31lkcxOvhr1KVVRTS/6htxOhrnkIuTSRDq7mZ4cI9TU
+      jpdZoOPHlwAdF6zq1wsD0N6RoL1lHbdkaGltxRKPpqYILg7GGB0TrOraCwOQ2VijkC8Q7jnP
+      6swkfT+6RHotSVv8FJZlYYwhFApVo9YfWFjLcPZUjJClrYw6Gjnu5Liu6/oWgJuD88SjLbz1
+      2hlftq/qX12/dIrA7ZEk+aLjdymqTtV1AAAKdolbw0ltxNWR1H0ARITRuRSrW7t+l6LqUN0H
+      YN8Xg/N4nh4F1OE0TABWN3cYnU/5XYaqMw0TABHhq+EkBbvkdymqjjRMAADyRYfbI9oQq/I1
+      VABEhKGZddbTOb9LUXWioQKwTxtiVa6GDMDyRpaHCxt+l6HqQEMGQES4NbygDbF6oYYMAECu
+      4PDN6KI2xOq5GjYAIsKD6TU2tnXgjnq2hg0AgAG+GJjH06OAeoaGDgDAYmqbiaQ2xOrpGj4A
+      IsKXQ0mKjjbE6ocaPgAAu3mbb8eW/C5D1aCyA7C9scrw8DALy2sM3L9LcmW9knWdKBFhYGqV
+      TW2I1RNeOCZ4n+M4SCjExlqKtpZmtjPbeGe68TzPt0uNnucdalD+5/2zfHLtElLBmlR9KTsA
+      HfEE61vbnOrpJp/ewnVd3wfFW5aFdYgB8YupLLMr21w611XBqlQ9KTsA4ZZ2Lr9xZe+T3p5K
+      1VNRew3xPK/0dBIJ+xNaVVsC0QQflM3Z3BnXhljtCVwARIT+iVW2stoQqwAGAMAzhpuD83qf
+      kApmAADmVjPMLKf9LkP5LLABEBFuPpjHKbl+l6J8FNgAAGzvFrk7vux3GcpHgQ6AiHBvYoXM
+      TsHvUpRPAh0AAM8z3HygDXFQBT4AADPLaeZWM36XoXygAWDvVOiLwXlKJV3sI2g0AI9kdgrc
+      n1zxuwxVZRqAR0SEOw+X2N4t+l2KqiINwAGuZ/iHNsSBogF4wtTSFgtr236XoapEA/CExw2x
+      qw1xEGgAnmIrm2dgatXvMlQVaACeQkT4dmyJbM72uxRVYWUHwCvZTE1OkrdLrCzOs5nZqWRd
+      viu5Hl8OaUPc6MoeErk0P8fpsy8xOT5MW2s327vLJDou+rpavDGmojvo+MImb54/zUunYhXb
+      hvJX2UeAnrNnWZqbwTMCIoGYWUEEbgzM4foUcFV5ZR8BxLIINTVz+eKrbK4sEO7qRUQQkUPN
+      zHCS9rdfSVvZAkMzKd651FvR7Sh/lL3nNkVauXTpIs3hEH0vn+dUPBinBSLCN6OL7Oa1IW5E
+      ehWoDHbJ5cuhBW2IG5AGoAwiwsOFDZY3GvvKVxBpAMokItoQNyANwCGkMjmGZ+pnUmD1YhqA
+      QxARbo8skis4fpeiTogG4JCKTolbw9oQNwoNwCGJCKNzKVa3dv0uRZ0ADcARiAg3+ud0NfoG
+      oAE4otX0LiNz2hDXOw3AEVkifDWcJF/UhrieaQCOoWCX+GpEV6OvZxqAYxARRmbXWUvn/C5F
+      HZEG4ATcGJjT1ejrlAbgBKxs7jA2n/K7DHUEGoATYIlwa2iBoq2r0dcbDcAJyRdL3B5JakNc
+      ZzQAJ0REeDCzTiqji+/Vk7IDsJNaon9omOm5JPfufEtyxf83gSxTe8sb3RiY06NAHSl/TLAI
+      juPgeYaOWDtbm1ucPdON53m+PeGXZYKRok0ufNqX7T/N4vo2o3Pr/FhXo68LZQfALnm0tbQg
+      uHjGIhSysCwLYwyhkD+rrseaDdfbB/gsfxU3XDtjlG8NL3LxpW5djb4OiDnmy7frur4FwBn/
+      C+7cLaZ2o/zduQpNzb7U8SRjDG9f7OXXb71c8Vkr1PE0RBN8oX2Hd+U+xquNnkBEGJhaZVNX
+      o695DREAgLc7Ulx0R2qqAb0xoFMr1rqGCYAl8OvOOc7YMzWz0yXXt5lY3PS7DPUcDRMAgLAF
+      f+wcI+rUxtTmlgg3B3U1+lrWUAEAaGvyuN4+QJNTG8ue5goO34wt1cxRSX1fwwUAoLvZ4XeR
+      u1DyfwV4EeH+xAppXY2+JjVkAADOt+f4pXUf49XGDWr6DnFtatgAALwV2+B1d7gmdrz5tW2m
+      l7b8LkM9oaEDIALXOhfocyZ9D4Elwg1dfK/mNHQAAJos+H3HOB32st+lsJu3+XZsye8y1AEN
+      HwCA1ibD9eggYTvtax0iwr2JZTK72hDXikAEACDRXOLDlrtIyd8B7MbAjX5tiGtFYAIA8HJb
+      ng9C9zGuv1eGZlczzK74ezRSewIVAIAr0U2ueIMY418zaolwY2AeVxti3wUuACLC1fgS55wJ
+      X09Dsrkid8b9b8yDLnABgL0b5z7snCRuL/pWg4hw5+Ey2VzRtxpUQAMA0BwyXI89IGJv+FaD
+      53ncGJjzbfvqEAEoZDcZGh5hcTXF+Ogwswv1f/jujLj8ofU+luPPXP8iwvRymrnV2rhxL4jK
+      HhPs2gUKTomdbIqWtjO4dhbP83wdFO+5Lt4xF63rbc5x1bnLzdIHYJX9cJyov9+f4T8+fBPL
+      0uGT1Vb2M767WyDWEcMtFsjsLhNqbvV9ULwJhTAnsEr95ViG7cwAg/wc8WHV+2zOZmB6nfcu
+      n636toOu7ACcfvlVOgoFIs0tuCUbCYUrWVdViQjvda6S3hpjPvxG1Qeyiwjfji3xxiuniLZG
+      qrrtoCv75U5EaGltxbKEcKSZplBj9c+WwD93TtNlL/iyfdfz+GJg3pdtB1lj7cXHFAnB9Y4h
+      Wuzqz3onIkwtbbKwpg1xNWkAnhALe/yxrR/L2fFl+5/r4ntVpQF4ip6WIr8N38WU7KpuV0RI
+      7xS4P7lS1e0GmQbgGS5Gs7zjw2RbIsI3o4vsFqobvqDSADzHzzvWea00WvX3OUqux81BbYir
+      QQPwHCLw2/gsp+zZqoZARJhIbrKYylZtm0GlAXiBsAXXO0Zod6p/Zejz/lltiCtMA1CG9rDh
+      evt9Qk71XpFFhM3tPIPTtTHLXaPSAJTpVLPD7yJ3MKXq3b4sInw9skiuoKvRV4oG4BBebd/l
+      PeteVa8M2SWXfwz58+50EGgADulnsQ0ulqo32ZaI8HA+xfKGNsSVoAE4pL0rQ/P02FNVvTL0
+      eb+uRl8JGoAjCFnwx86HRO3qNKgiQiqTY2h6rSrbC4pcwdEAHFVrk+Ffov002dW5eU1EuD2y
+      SL6oDfFJWNnc4T//b1gDcBxdzSV+33IHStVZC6zolLg1lKzKthrZg+k1/uuLUXJFPQIc28tt
+      ed637lVlGnYRYWRunZG5db00egQl1+N/70zzef8s++1U2SPCCrvbLK2miHedxsmlMeF2ek/r
+      YtAAP4ltkk4/YEzervhoMhHhb3dnMAZibRF6u6L0dkXp645yurONUIMNVDop27kin301QSqT
+      +95zVHYAIq3t9HYXWclkWVmY5cpPf16RQuuRiPCr+CKZzXaWI5eqEgIR2C04TC1tMbm4iTFg
+      WcLpeBu9iSi9Xe30dceItUUCv1bx/FqGP389RdEp/eCxOMRC2YapiUnOX7yI5ziMPZzgzTff
+      wHVd3x5gd+KvuPNf+bLtp7E9i0/T77Ad6fO7FAA8Y2iNNHEm0U5vop2+7ig9XVHCATpK3Hm4
+      zDfPmZK+7COAMYbORBeWKTE9PU1n16mGmRXipLRY8HHHIJ/utOFEEn6XgwU4rmExtUNyPYsB
+      BOjqaKU3EaWnq52z3TESsZaGO0rYjstf70wxs5zGes4+cogjwNO5rutbAJzxv+DO3fJl28+z
+      lG/hT4VrmHCb36U80/7T7hlDczhEz6NA9HVF6euO0RLxZ46kk7Cxneez2xNkdgovDHb9/l/W
+      sLOtBa6V7vIP9yoSqs2HeH/HCIlQcg2LqSzJ9W1gLxTxaAs9B3qJ051tdTFx10Ryg7/dm8Up
+      lXdqXpvPTgO4HE2TTvczZL2LSO2cpj3PwVBkczbZ3CYTyQ2MgVBIOBNvp6ernd6uKGe7YzU1
+      h5HnGb4cXqB/YuXRRYLywqoBqBAR4YP4CunNcZKR1+v2HHv/ipMxsLq1y8rmDgOs4nmGaGvk
+      cSD6uvYabD/mi8oXHf709SSLqeyhH2ftASrMceHT9Ntkms/5XUrFGGMwZu9Gwe7ONnoTj44S
+      p2J0tjdXNPwrmzv8z9eT7ObtI21HA1AFWcfiv7PvY0e6/S6lKh432J6hpbmJnkeB2H/Drjl8
+      MiceQzNr3BjYm0fpqCHTAFTJSr6ZzwrXMOF2v0vxxcGrTolY6+OjRF93lO7ONqxD7MAl1+Pz
+      /llG51LHPrpoAKpoYifG30vXsJoaZ2Lh4zDG4BlDOBTiTOLRO9jdew12W8vTH6NsrshntydZ
+      T+8ea+c3xtDhrGgTXE2XolnS6Xv0e+/5Mg17rRERQiJ4xrCyucvyxg5MgusZOtqav2uwu6P0
+      JNpZSmX58zdTFOwf3tJwGMYYOp1lPum4rwGotl90rrO1Ocpc5ErdXhmqlP3Hoykk5IoOM8tp
+      ppe2HjfY+99z3Mctbif5JD5IS8jo7dDVJgIfJmbosnXmt3KICJYlJ7LjAySKc/z7o50fdEik
+      L5os+NinadiDrLs4wyfxBzSHvmt7NQA+aQsbPmq7h/g0DXvQnC5O82/xYSJPXK/RAPiou9nm
+      w8i3eFWehj1oeoqT/GtihPBTLlZqAHwkIpxv2+U9uYc55mqX6un6iuN8nBgj/Iw9XQPgMxF4
+      uyPFa6Uhv0tpOGeLD/koMU7Tc/ZyDUANEIHfxefoLk77XUrDOGeP8VHXBC+6N08DUCNClvBR
+      5yhtRZ0N+jiMMbxsj3I9MUE5wxfKfiMsn00zv7iMCbWAnSUc7eLCK417h6MfWpsMH0Xv8+nu
+      r/AiMb/LqTvGGM47I/whMXPy4wFaY3ES0S1CHZ3spGO4zjae5+F5XtWXENrnuS5egzWP8bDN
+      7yNf8xfnVxBq9rucOmJ4zRnhw8TelDHl7pKHGBTvkcm7XOiLsTAxSLi9UwfFV8gr0QIfbN/n
+      a95HLH8e23pijMel0jD/1DV/6NF3ejdojTIGvtg6x3j4Z3rP0HMYz+N1d5DfxJMc5WFqvJfP
+      BiECv0kk6bUnfTvFrHXG87ji9h955wcNQE2zBK7Hx4naunD2k4zn8pZ3j2vxpSPv/KABqHnN
+      IcPH0X6a7LTfpdQM47n8zLvH+50rx9r5QQNQF+LNLn9ouVu1adhrmfFc3jV3eO8Edn7QANSN
+      c215rlp38dzKT8Neq4zn8gvu8G7H2oldGNARYXXkSmyLdHqAEXmH4738mUd/9j6COdBo7//b
+      07/ve78DkIM/d+Bnvv+17wbFCwYwyMG/G3Pg69/925P//bQ1yU9j6yd6VUwDUEdEhKvxZU5t
+      b+F5srdjCAd2GBDZ+wg84/P933XwZ7/7voO/03r8d3Pg6+bx75Ef/E4Q5LvPD37fgSGNx3wU
+      jvnz36cBqDOWwOudBR+2LE98bAzaA6hA0wCoQNMAqEDTAKhA0wCoQNMAqEDTAKhA0wCoQNMA
+      qEArOwDGGJaT82RzBZKz0yRXdF5LVf/KvhUiu7rAQirDjzsSLCwtcfkn7zy+wcm3EUvG6Ggp
+      dSxlB6BYyHPu1QusLi/wy/evMjoyRuebb/g6K4OnAVDHVHYATv3oAlMTk5zq6WN2aorEmR7f
+      Z4XwLKshZ4VQ1VN2AMRq4uLrlwHojndWrKDD0Vd/dTx1/fJZSocpbeZ0ZmV1ZHUdAOO2Y6cv
+      UFyw8Hbz2g+oQ6vrAAAgITzvHIWVczjLDsbRxSZU+eo/APusVkrF18jPx3FSelqkytM4Adhn
+      dWFvX6Q434SbzelpkXquxgsAIGLhmbMU136EvVTCKxb9LknVqIYMwGNWC679KoVkN856HuO5
+      flekakxjB2CfFcfJXqAwF8Hd1tMitceYIK0ULxaGPorr57GTLl6hoEEIMON52EtegAKwz4rg
+      ls5TWDyDs1bEBHiqwaAyrou9KLj2KwGeGMvqoLQbw91dJ9yVJtTZqgtRBIAplSguhvG8l4Cg
+      9ADPIoKRM9gbr1JcMHh5PS1qZMYpUVxswXPPPv7a/wNgN9pMFxOfxgAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Mortality Rate over Time' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
       AAAKAUlEQVR4nO3d2W/b2BkF8ENSoi3vluItsp1xGmdpMEDRh+n/X6APRZ/60M4gie04Xsar
       ZC3cee/tg5w0iV2UikQ5N9/5PTmAYXxGdEzy8vDSMcYYEAnljvoDmB+y2cgB0FqPYw6iBzFy
