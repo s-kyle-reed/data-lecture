@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0515.1630                               -->
+<workbook original-version='18.1' source-build='2019.2.0 (20192.19.0515.1630)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Small Table (Germ Theory of Disease)' inline='true' name='federated.1nm5rmc169uj1j1gy59nf0aa0pr7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Germ Theory of Disease' name='google-sheets.06mrj3v1f5bw5214zs1oj0i7mm5l'>
+            <connection REDIRECT_URI='urn:ietf:wg:oauth:2.0:oob' SCOPE='email profile https://www.googleapis.com/auth/drive.readonly' class='google-sheets' cleaning='no' compat='no' dataRefreshTime='' filename='Germ Theory of Disease' googleSheetId='1_5QjzzBa5EoLQKM8MVgpHi4jbHLf5PrPBBk6cG0T7KE' interpretationMode='8' mimeType='application/vnd.google-apps.spreadsheet' server='' server-oauth='' username='spencershadley@gmail.com' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='google-sheets.06mrj3v1f5bw5214zs1oj0i7mm5l' name='Small Table' table='[&apos;Small Table$&apos;]' type='table'>
+          <columns gridOrigin='A1:E13:no:A1:E13:0' header='yes' outcome='6'>
+            <column datatype='string' name='Clinic' ordinal='0' />
+            <column datatype='integer' name='Year' ordinal='1' />
+            <column datatype='integer' name='Births' ordinal='2' />
+            <column datatype='integer' name='Deaths' ordinal='3' />
+            <column datatype='real' name='Mortality Rate (%)' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Clinic</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Clinic]</local-name>
+            <parent-name>[Small Table]</parent-name>
+            <remote-alias>Clinic</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Small Table]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Births</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Births]</local-name>
+            <parent-name>[Small Table]</parent-name>
+            <remote-alias>Births</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Deaths]</local-name>
+            <parent-name>[Small Table]</parent-name>
+            <remote-alias>Deaths</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mortality Rate (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mortality Rate (%)]</local-name>
+            <parent-name>[Small Table]</parent-name>
+            <remote-alias>Mortality Rate (%)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Small Table]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E13:no:A1:E13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.480327' measure-ordering='alphabetic' measure-percentage='0.519673' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Small Table (Germ Theory of Disease)' name='federated.1nm5rmc169uj1j1gy59nf0aa0pr7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nm5rmc169uj1j1gy59nf0aa0pr7'>
+            <column datatype='integer' name='[Births]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Clinic]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Deaths]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Mortality Rate (%)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Clinic]' derivation='None' name='[none:Clinic:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Births]' derivation='Sum' name='[sum:Births:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Deaths]' derivation='Sum' name='[sum:Deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mortality Rate (%)]' derivation='Sum' name='[sum:Mortality Rate (%):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1nm5rmc169uj1j1gy59nf0aa0pr7].[none:Clinic:nk]' />
+              <tooltip column='[federated.1nm5rmc169uj1j1gy59nf0aa0pr7].[sum:Births:qk]' />
+              <tooltip column='[federated.1nm5rmc169uj1j1gy59nf0aa0pr7].[sum:Deaths:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1nm5rmc169uj1j1gy59nf0aa0pr7].[sum:Mortality Rate (%):qk]</rows>
+        <cols>[federated.1nm5rmc169uj1j1gy59nf0aa0pr7].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{17543D63-03C7-42D4-97AF-976EA16A0C77}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.1nm5rmc169uj1j1gy59nf0aa0pr7].[none:Clinic:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1nm5rmc169uj1j1gy59nf0aa0pr7].[:Measure Names]</field>
+            <field>[federated.1nm5rmc169uj1j1gy59nf0aa0pr7].[none:Clinic:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{313DB882-DC6C-400B-9F85-44436F01D608}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
