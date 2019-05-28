@@ -1,0 +1,2597 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0515.1630                               -->
+<workbook original-version='18.1' source-build='2019.2.0 (20192.19.0515.1630)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='technology-adoption-by-households-in-the-united-states' inline='true' name='federated.0e8byiv1kvb5kv103c0dj1yc1gwp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='technology-adoption-by-households-in-the-united-states' name='textscan.0o6dhbm02uiey018c2rga1vjcy7p'>
+            <connection class='textscan' directory='C:/Users/spenc/Desktop/japan trip' filename='technology-adoption-by-households-in-the-united-states.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0o6dhbm02uiey018c2rga1vjcy7p' name='technology-adoption-by-households-in-the-united-states.csv' table='[technology-adoption-by-households-in-the-united-states#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Entity' ordinal='0' />
+            <column datatype='string' name='Code' ordinal='1' />
+            <column datatype='integer' name='Year' ordinal='2' />
+            <column datatype='real' name='Technology Diffusion (Comin and Hobijn (2004) and others) (%)' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[technology-adoption-by-households-in-the-united-states.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Entity]</local-name>
+            <parent-name>[technology-adoption-by-households-in-the-united-states.csv]</parent-name>
+            <remote-alias>Entity</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Code]</local-name>
+            <parent-name>[technology-adoption-by-households-in-the-united-states.csv]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[technology-adoption-by-households-in-the-united-states.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Technology Diffusion (Comin and Hobijn (2004) and others) (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Technology Diffusion (Comin and Hobijn (2004) and others) (%)]</local-name>
+            <parent-name>[technology-adoption-by-households-in-the-united-states.csv]</parent-name>
+            <remote-alias>Technology Diffusion (Comin and Hobijn (2004) and others) (%)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='string' name='[Entity]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column-instance column='[Entity]' derivation='None' name='[none:Entity:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+      <group hidden='true' name='[Exclusions (Entity,Year)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:Entity:nk]' />
+          <groupfilter function='level-members' level='[none:Year:ok]' />
+        </groupfilter>
+      </group>
+      <layout dim-ordering='alphabetic' dim-percentage='0.514706' measure-ordering='alphabetic' measure-percentage='0.485294' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Entity:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Disk brakes&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Refrigerator&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Automatic transmission&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Cellular phone&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Landline&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Washing machine&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Central heating&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Internet&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Podcasting&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Electric Range&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Dryer&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;RTGS adoption&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Colour TV&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Power steering&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Videocassette recorder&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Automobile&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Microcomputer&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Water Heater&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Home air conditioning&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Television&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Computer&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Radial tires&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Electronic ignition&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Flush toilet&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Stove&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Household refrigerator&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Vacuum&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Iron&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Washer&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Ebook reader&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Running water&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Social media usage&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Smartphone usage&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Dishwasher&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Radio&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Cable TV&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Microwave&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Freezer&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Tablet&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Electric power&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Shipping container port infrastructure&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Nox pollution controls (boilers)&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='technology-adoption-by-households-in-the-united-states' name='federated.0e8byiv1kvb5kv103c0dj1yc1gwp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e8byiv1kvb5kv103c0dj1yc1gwp'>
+            <column datatype='string' name='[Entity]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Technology Diffusion (Comin and Hobijn (2004) and others) (%)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Entity]' derivation='None' name='[none:Entity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Technology Diffusion (Comin and Hobijn (2004) and others) (%)]' derivation='Sum' name='[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Cellular phone&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Internet&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Microcomputer&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Smartphone usage&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Social media usage&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Tablet&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Microcomputer&quot;</bucket>
+              <bucket>&quot;Cellular phone&quot;</bucket>
+              <bucket>&quot;Internet&quot;</bucket>
+              <bucket>&quot;Social media usage&quot;</bucket>
+              <bucket>&quot;Smartphone usage&quot;</bucket>
+              <bucket>&quot;Tablet&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='line-end-size' id='annotation_2' value='smallest' />
+            <format attr='line-end-size' id='annotation_0' value='smallest' />
+            <format attr='fill-color' id='annotation_2' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_0' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_3' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_4' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_5' value='#fafafa00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+              <lod column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+              <lod column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='50% adoption' label-type='custom' scope='per-table' value='50.0' value-column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='14.547999382019043' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</rows>
+        <cols>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</cols>
+        <pages>
+          <column>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</column>
+        </pages>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='278'>
+            <formatted-text>
+              <run fontcolor='#787878'>Entity: </run>
+              <run bold='true'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Years to reach 50% penetration: </run>
+              <run bold='true' fontcolor='#787878'>8</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Cellular phone&quot;</value>
+                    <value>2001</value>
+                    <value>2001</value>
+                    <value>49.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-236' y='-160' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='294'>
+            <formatted-text>
+              <run fontcolor='#787878'>Entity: </run>
+              <run bold='true'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run>&#10;Years to reach 50% penetration: </run>
+              <run bold='true'>16</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Microcomputer&quot;</value>
+                    <value>2000</value>
+                    <value>2000</value>
+                    <value>51.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-224' y='-208' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='292'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years to 50% market penetration:</run>
+              <run bold='true' fontalignment='1' fontcolor='#787878'> 5</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Social media usage&quot;</value>
+                    <value>2010</value>
+                    <value>2010</value>
+                    <value>48.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-415' y='-53' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='232'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Yea</run>
+              <run fontalignment='1'>rs to 50% penetration:</run>
+              <run bold='true' fontalignment='1'> 8 </run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Internet&quot;</value>
+                    <value>2001</value>
+                    <value>2001</value>
+                    <value>49.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-230' y='-102' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='257'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years to 50% penetration: </run>
+              <run bold='true' fontalignment='1' fontcolor='#787878'>6</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Tablet&quot;</value>
+                    <value>2016</value>
+                    <value>2016</value>
+                    <value>51.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-566' y='48' />
+          </annotation>
+        </annotations>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{E1AEA006-FC21-4356-B725-E77E59EF9B24}' />
+    </worksheet>
+    <worksheet name='Sheet 1 (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='technology-adoption-by-households-in-the-united-states' name='federated.0e8byiv1kvb5kv103c0dj1yc1gwp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e8byiv1kvb5kv103c0dj1yc1gwp'>
+            <column datatype='string' name='[Entity]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Technology Diffusion (Comin and Hobijn (2004) and others) (%)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Entity]' derivation='None' name='[none:Entity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Technology Diffusion (Comin and Hobijn (2004) and others) (%)]' derivation='Sum' name='[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[Exclusions (Entity,Year)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:Entity:nk]' />
+                <groupfilter function='level-members' level='[none:Year:ok]' />
+              </groupfilter>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Automatic transmission&quot;' />
+                  <groupfilter function='member' level='[none:Year:ok]' member='1910' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Dishwasher&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:Year:ok]' member='1922' />
+                    <groupfilter function='member' level='[none:Year:ok]' member='1923' />
+                    <groupfilter function='member' level='[none:Year:ok]' member='1924' />
+                    <groupfilter function='member' level='[none:Year:ok]' member='1931' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Dishwasher&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Flush toilet&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Home air conditioning&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Internet&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Landline&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Microcomputer&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Microwave&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Social media usage&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Tablet&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Washing machine&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Microcomputer&quot;</bucket>
+              <bucket>&quot;Cellular phone&quot;</bucket>
+              <bucket>&quot;Internet&quot;</bucket>
+              <bucket>&quot;Social media usage&quot;</bucket>
+              <bucket>&quot;Smartphone usage&quot;</bucket>
+              <bucket>&quot;Tablet&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</column>
+            <column>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[Exclusions (Entity,Year)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='line-end-size' id='annotation_2' value='smallest' />
+            <format attr='line-end-size' id='annotation_0' value='smallest' />
+            <format attr='fill-color' id='annotation_2' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_0' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_3' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_4' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_5' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_6' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_8' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_9' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_10' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_11' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_13' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_12' value='#fafafa00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+              <text column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+              <lod column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+              <lod column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='50% adoption' label-type='custom' scope='per-table' value='50.0' value-column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='14.547999382019043' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</rows>
+        <cols>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</cols>
+        <pages>
+          <column>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</column>
+        </pages>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='278'>
+            <formatted-text>
+              <run fontcolor='#787878'>Entity: </run>
+              <run bold='true'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Years to reach 50% penetration: </run>
+              <run bold='true' fontcolor='#787878'>8</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Cellular phone&quot;</value>
+                    <value>2001</value>
+                    <value>2001</value>
+                    <value>49.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-236' y='-160' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='247'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years:</run>
+              <run fontalignment='1'>Æ </run>
+              <run bold='true' fontalignment='1'>1985-2000 (15 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Microcomputer&quot;</value>
+                    <value>2000</value>
+                    <value>2000</value>
+                    <value>51.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-725' y='145' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='292'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years:</run>
+              <run bold='true' fontalignment='1' fontcolor='#787878'>Æ </run>
+              <run bold='true' fontalignment='1' fontcolor='#000000'>2005-2011 (6 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Social media usage&quot;</value>
+                    <value>2010</value>
+                    <value>2010</value>
+                    <value>48.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-492' y='-230' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='232'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years:</run>
+              <run fontalignment='1'> 1993-2002</run>
+              <run bold='true' fontalignment='1'> (9 years) </run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Internet&quot;</value>
+                    <value>2001</value>
+                    <value>2001</value>
+                    <value>49.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-439' y='-296' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='257'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years: </run>
+              <run bold='true' fontalignment='1' fontcolor='#000000'>2011-2016 (5 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Tablet&quot;</value>
+                    <value>2016</value>
+                    <value>2016</value>
+                    <value>51.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-500' y='-148' />
+          </annotation>
+          <annotation class='point' id='6' mark-position='1' pullback='12' text-width='332'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years:</run>
+              <run bold='true' fontalignment='1'> 1860-1931 (71 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Flush toilet&quot;</value>
+                    <value>1931</value>
+                    <value>1931</value>
+                    <value>51.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-308' y='-300' />
+          </annotation>
+          <annotation class='point' id='7' mark-position='1' pullback='12' text-width='230'>
+            <formatted-text>
+              <run fontcolor='#787878'>Entity: </run>
+              <run bold='true'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Years to 50% adoption: </run>
+              <run bold='true' fontcolor='#787878'>14</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Automatic transmission&quot;</value>
+                    <value>1953</value>
+                    <value>1953</value>
+                    <value>50.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-353' y='-131' />
+          </annotation>
+          <annotation class='point' id='8' mark-position='1' pullback='12' text-width='275'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years: </run>
+              <run bold='true' fontalignment='1' fontcolor='#000000'>1966-1974 (8 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Colour TV&quot;</value>
+                    <value>1974</value>
+                    <value>1974</value>
+                    <value>57.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-582' y='-29' />
+          </annotation>
+          <annotation class='point' id='9' mark-position='1' pullback='12' text-width='298'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years: </run>
+              <run bold='true' fontalignment='1' fontcolor='#000000'>1903-1946 (43 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Landline&quot;</value>
+                    <value>1946</value>
+                    <value>1946</value>
+                    <value>50.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-401' y='-234' />
+          </annotation>
+          <annotation class='point' id='10' mark-position='1' pullback='12' text-width='237'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years:</run>
+              <run bold='true' fontalignment='1' fontcolor='#000000'> 1930-1965 (35 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Washing machine&quot;</value>
+                    <value>1965</value>
+                    <value>1965</value>
+                    <value>50.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-552' y='-156' />
+          </annotation>
+          <annotation class='point' id='11' mark-position='1' pullback='12' text-width='320'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years: </run>
+              <run bold='true' fontalignment='1' fontcolor='#000000'>1957-1974 (17 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Home air conditioning&quot;</value>
+                    <value>1974</value>
+                    <value>1974</value>
+                    <value>50.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-562' y='-95' />
+          </annotation>
+          <annotation class='point' id='12' mark-position='1' pullback='12' text-width='264'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years: </run>
+              <run bold='true' fontalignment='1' fontcolor='#000000'>1963-1998 (35 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Dishwasher&quot;</value>
+                    <value>1998</value>
+                    <value>1998</value>
+                    <value>56.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-727' y='109' />
+          </annotation>
+          <annotation class='point' id='13' mark-position='1' pullback='12' text-width='243'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years:</run>
+              <run bold='true' fontalignment='1'> 1975-1986 (11 years)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Microwave&quot;</value>
+                    <value>1986</value>
+                    <value>1986</value>
+                    <value>60.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-633' y='28' />
+          </annotation>
+        </annotations>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{6D048147-73F3-4EE2-AEFA-52F9CC397745}' />
+    </worksheet>
+    <worksheet name='Sheet 1 (3)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='technology-adoption-by-households-in-the-united-states' name='federated.0e8byiv1kvb5kv103c0dj1yc1gwp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0e8byiv1kvb5kv103c0dj1yc1gwp'>
+            <column datatype='string' name='[Entity]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Technology Diffusion (Comin and Hobijn (2004) and others) (%)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Entity]' derivation='None' name='[none:Entity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Technology Diffusion (Comin and Hobijn (2004) and others) (%)]' derivation='Sum' name='[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[Exclusions (Entity,Year)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:Entity:nk]' />
+                <groupfilter function='level-members' level='[none:Year:ok]' />
+              </groupfilter>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Automatic transmission&quot;' />
+                <groupfilter function='member' level='[none:Year:ok]' member='1910' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Automatic transmission&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Cable TV&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Colour TV&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Dishwasher&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Flush toilet&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Home air conditioning&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Internet&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Landline&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Microcomputer&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Microwave&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Smartphone usage&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Social media usage&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Tablet&quot;' />
+              <groupfilter function='member' level='[none:Entity:nk]' member='&quot;Washing machine&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Microcomputer&quot;</bucket>
+              <bucket>&quot;Cellular phone&quot;</bucket>
+              <bucket>&quot;Internet&quot;</bucket>
+              <bucket>&quot;Social media usage&quot;</bucket>
+              <bucket>&quot;Smartphone usage&quot;</bucket>
+              <bucket>&quot;Tablet&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</column>
+            <column>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[Exclusions (Entity,Year)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='line-end-size' id='annotation_2' value='smallest' />
+            <format attr='line-end-size' id='annotation_0' value='smallest' />
+            <format attr='fill-color' id='annotation_2' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_0' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_3' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_4' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_5' value='#fafafa00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+              <text column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+              <lod column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+              <lod column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]' enable-instant-analytics='true' formula='constant' id='refline0' label='50% adoption' label-type='custom' scope='per-table' value='50.0' value-column='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.1754143238067627' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</rows>
+        <cols>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='278'>
+            <formatted-text>
+              <run fontcolor='#787878'>Entity: </run>
+              <run bold='true'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Years to reach 50% penetration: </run>
+              <run bold='true' fontcolor='#787878'>8</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Cellular phone&quot;</value>
+                    <value>2001</value>
+                    <value>2001</value>
+                    <value>49.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-236' y='-160' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='247'>
+            <formatted-text>
+              <run fontcolor='#787878'>Entity: </run>
+              <run bold='true'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run>&#10;Years to reach 50% penetration: </run>
+              <run bold='true'>16</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Microcomputer&quot;</value>
+                    <value>2000</value>
+                    <value>2000</value>
+                    <value>51.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-378' y='-219' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='292'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years to 50% market penetration:</run>
+              <run bold='true' fontalignment='1' fontcolor='#787878'> 5</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Social media usage&quot;</value>
+                    <value>2010</value>
+                    <value>2010</value>
+                    <value>48.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-387' y='-136' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='232'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Yea</run>
+              <run fontalignment='1'>rs to 50% penetration:</run>
+              <run bold='true' fontalignment='1'> 8 </run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Internet&quot;</value>
+                    <value>2001</value>
+                    <value>2001</value>
+                    <value>49.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-388' y='-182' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='257'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#787878'>Entity: </run>
+              <run bold='true' fontalignment='1'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#787878'>Years to 50% penetration: </run>
+              <run bold='true' fontalignment='1' fontcolor='#787878'>6</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Tablet&quot;</value>
+                    <value>2016</value>
+                    <value>2016</value>
+                    <value>51.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-425' y='-71' />
+          </annotation>
+          <annotation class='point' id='6' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>Entity: </run>
+              <run bold='true'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Years to 50% adoption:</run>
+              <run bold='true'> 71</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Flush toilet&quot;</value>
+                    <value>1931</value>
+                    <value>1931</value>
+                    <value>51.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-171' y='-156' />
+          </annotation>
+          <annotation class='point' id='7' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>Entity: </run>
+              <run bold='true'>&lt;[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Years to 50% adoption: </run>
+              <run bold='true' fontcolor='#787878'>14</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                      <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Automatic transmission&quot;</value>
+                    <value>1953</value>
+                    <value>1953</value>
+                    <value>50.0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-294' y='-83' />
+          </annotation>
+        </annotations>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{3A70E27B-E689-44DA-9BEA-E87A082744E4}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Story 1' type='storyboard'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98476' id='1' param='vert' removable='false' type='layout-flow' w='99166' x='417' y='762'>
+            <zone h='4000' id='3' type='title' w='99166' x='417' y='762' />
+            <zone h='6000' id='4' paired-zone-id='5' removable='false' type='flipboard-nav' w='99166' x='417' y='4762' />
+            <zone h='88476' id='5' paired-zone-id='4' removable='false' type='flipboard' w='99166' x='417' y='10762'>
+              <flipboard active-id='1' nav-type='dot' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='Sheet 1' id='1'>
+                    <currentDeltas>
+                      <worksheet name='Sheet 1'>
+                        <highlight>
+                          <color-one-way>
+                            <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                            <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                          </color-one-way>
+                        </highlight>
+                      </worksheet>
+                    </currentDeltas>
+                    <capturedDeltas />
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{960CA072-EC93-450B-82F0-2BE8FA874078}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='currpage' />
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>2016</bucket>
+          </multibucket>
+        </current-page>
+        <highlight field='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]'>
+          <color-one-way>
+            <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+            <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+          </color-one-way>
+          <bucket-selection>
+            <bucket>&quot;Internet&quot;</bucket>
+          </bucket-selection>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E6182D25-6CFE-4D9B-A289-219F5064FEC7}' />
+    </window>
+    <window class='worksheet' name='Sheet 1 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='currpage' />
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' type='color' />
+            <card param='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' type='filter' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>2016</bucket>
+          </multibucket>
+        </current-page>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Dishwasher&quot;</value>
+                <value>1922</value>
+                <value>1922</value>
+                <value>1.1000000000000001</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Dishwasher&quot;</value>
+                <value>1924</value>
+                <value>1924</value>
+                <value>1.8</value>
+              </tuple>
+            </tuple-reference>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:ok]</field>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+                  <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[sum:Technology Diffusion (Comin and Hobijn (2004) and others) (%):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Dishwasher&quot;</value>
+                <value>1931</value>
+                <value>1931</value>
+                <value>0.59999999999999998</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+            <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{02B87933-8364-4604-996A-BD24F41108F1}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 1 (3)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Entity:nk]</field>
+            <field>[federated.0e8byiv1kvb5kv103c0dj1yc1gwp].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{510CF52E-8434-4905-B2B8-C1DB22AAF0B3}' />
+    </window>
+    <window class='dashboard' name='Story 1'>
+      <viewpoints />
+      <active id='5' />
+      <simple-id uuid='{A6CC3889-5923-4680-AF48-C8EDDE4302A0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      IzwdNpEeAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1 (2)' width='192'>
+      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
+      Bj96l5wpk0+n+fpr/xexOsq3CAPYGvntGgu0nrigzf6brqyskEwmv9BDVHPXAoEAnusiawFU
+      0TtGcA9Um+XdL6qxPVWqha8KhcIXdoqp0VDXdFyvjKJqKHd5GXqey9jIMMF4E3ZphYIlcbBv
+      752FBQ8l2WwWSZJqGm6sh/n5eX7+85/zl3/5l/zqV79CkiQ/NOLAgQNcunSJ69ev8zd/8zdE
+      IhFOnDhBLBYjEokwOjpKX18fmUyGwcFB/uqv/oq33nqLjo4O2tvbee+993jiiSc4efIkf/zH
+      f8zKygqffPIJ3/ve95BlGcdx7thZpsYAMisrxBNJlqcnKVmg32EvwDHzzM2v0CRraKgkFZeK
+      56HfTIpfbyZONWtovWymfDWjaTvoUq98Ve/7ed8jkQhDQ0MkEgm/xVFbWxvLy8vIskwmk2HX
+      rl3MzMywZ88eNE0jGo2STCaxLItiscj09DS5XM6/9wsLC7z66quMjo4yPz/v1++sFt/SNI23
+      3nqL733ve3z00UeMjY2RTqdxHIef/exndHd389Of/tSvGhEIBEin08zMzPDmm2/S09PD0tKS
+      Py16/PHH+fnPf15rAC0tLUylDZ599gnuZtOyGiIc0bEME8+zyNnQejPNTSTF33/5rVoDBINB
+      urq6OH/+PLFYzPe+lEolmpqa/FZNmUyGvr7VIsuqqvqbVz/4wQ/4t3/7N5566ilisRj/+I//
+      yNTUFH/6p3/K5OQkruvS3t5OJpNh3759fp2g8+fP89hjjzE5OYmu60xPT9Pf3++PEDdu3GBk
+      ZIShoSGeffZZzp49y7e+9S3++Z//mf379zM4OMhzzz3Hj3/8Y4LBYK0BLOVKNGo2Z3/3Mf0v
+      7iZxhxFAVnQGDg+AJCPj4XgSCqv7CIKdQ0dHB7Is88gjj7CwsEBbWxtzc3N0dHSgaZqfWrlr
+      1y7y+TyxWIzJyUn6+vr83OLvfve7xGIxLly4wA9/+ENu3LhBV1eX78IcHx9ncXGR3bt3k8lk
+      GBgYQNM0isUihw8fJpvNUiqVGB0dZWpqip6eHjRNw3VdWltb6ezsJBwO09jYSDKZ5LnnnuPp
+      p58mnU4TjUY5fPhwbYeYifFxdvf0MHb1IpHm3bQ1rb8fk/ACbY38dvUCbZYuhUIBSZLW9Aqr
+      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
+      O/8H1FxMK59VvD4AAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1 (3)' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Story 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
