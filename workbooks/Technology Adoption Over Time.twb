@@ -117,7 +117,7 @@
           <groupfilter function='level-members' level='[none:Year:ok]' />
         </groupfilter>
       </group>
-      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.484666' parameter-percentage='0.0153341' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.351041' measure-ordering='alphabetic' measure-percentage='0.338445' parameter-percentage='0.310515' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[none:Entity:nk]' type='palette'>
@@ -1282,7 +1282,7 @@
                 </tuple-reference>
               </visual-coordinate>
             </point>
-            <body x='184' y='40' />
+            <body x='-118' y='-68' />
           </annotation>
         </annotations>
         <page-trail-options enabled='true' mark-type='all' />
@@ -1613,7 +1613,7 @@
     </dashboard>
   </dashboards>
   <windows saved-dpi-scale-factor='1.25' source-height='37'>
-    <window class='worksheet' maximized='true' name='Adoption Through Time (all)'>
+    <window class='worksheet' name='Adoption Through Time (all)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1637,7 +1637,7 @@
       <viewpoint>
         <current-page>
           <multibucket>
-            <bucket>1933</bucket>
+            <bucket>1860</bucket>
           </multibucket>
         </current-page>
         <highlight>
@@ -1649,7 +1649,7 @@
       </viewpoint>
       <simple-id uuid='{02B87933-8364-4604-996A-BD24F41108F1}' />
     </window>
-    <window class='worksheet' name='Adoption Over Time'>
+    <window class='worksheet' maximized='true' name='Adoption Over Time'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1726,7 +1726,7 @@
     </window>
     <window class='dashboard' name='Story 1'>
       <viewpoints />
-      <active id='5' />
+      <active id='-1' />
       <simple-id uuid='{A6CC3889-5923-4680-AF48-C8EDDE4302A0}' />
     </window>
   </windows>
@@ -1778,49 +1778,39 @@
     </thumbnail>
     <thumbnail height='192' name='Adoption Through Time (all)' width='192'>
       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
-      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
+      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
+      1fVrOtp7qywEddgLVOkse4HONGovUNJe1je795V0egp5qpUr6+qKvUBYTOXfAoWgpeWVDx90
+      1K32PMAXxV0gWCMAWCMAWCMAWCMAWCMAWCMAWCMAWCMAWCMAWCMAWCMAWCMAWCMAWCMAWCMA
+      WCMAWCMAWCMAWLvUXqDHDx+qM1hTP5nrf5Oobx9s13E2oHaX2gt0fDxWR20l/b6utqPGMarH
+      XqBKZ9kLdHG+MXuB1FpSlmaaT4/0fhZ189z+GvYCVTPLXqAzjdsL9K/vdhRaHSXKleZSS+wF
+      wmK61F6gbq//4YOWinUGNBN3gWCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCN
+      AGCNAGCNAGCNAGCNAGCNAGCNAGDtElshZnr+/L86mmUa9ltKW33tbt2v42xA7UIsukDlnHRy
+      qNfvJtL0d43GUf/8/hvpw16gEMJHs3meF17tUWb29NifPl4V127C7F/9+ZWZrfPa5bdCKOrl
+      631tbO9o/81YBwcHykJQh71Alc6yF+hMo/YCSdLmP7aVhKDbd+/p5t17aou9QFhMlwggKElO
+      XpaTVou/orHQ+P2FNQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKA
+      NQKANQKANQKANQKAtUvvBXo/TXV9pavDadT33+7WcTagdpfaCzQf/6E3v00Vp8caKGp1a1N9
+      9gJVOvtXf34LvhforbZ2dvTs4Y96M4364dz+GvYCVTPLXqAzDdsLFLS9e/KW58F3/z574PIX
+      Ar46/giGNQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKAtf8D
+      Vvz2CZYcHSsAAAAASUVORK5CYII=
     </thumbnail>
     <thumbnail height='192' name='Adoption Through Time (tech)' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
