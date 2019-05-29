@@ -13,7 +13,7 @@ Workbooks that have a datasource included but no visualization
 
 # Datasources
 
-The relevant datasources for the above workbooks
+The relevant datasources for the above workbooks. See [this nested README](Datasources/README.md) for more info on the specific datasources.
 
 # More Workbooks and Data
 
