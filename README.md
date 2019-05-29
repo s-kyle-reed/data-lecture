@@ -10,7 +10,7 @@ Guest Lecture discussing the growth of Big Data, why that data matters, how data
 
 [Assets for slidedeck](assets)
 
-[Tableau Workbook and datasources](workbooks)
+[Tableau Workbook and Datasources](workbooks)
 - Some of the workbooks require access to Google Sheets, permission is set to public so sign in with any account
 - [Anime Google Sheet](https://docs.google.com/spreadsheets/d/17KQKFy9o1pPG0Yko2dTYZcRhNSTdNWyI3NLWsJyfqbI/edit?usp=sharing)
 - [Germ Theory of Disease Google Sheet](https://docs.google.com/spreadsheets/d/1_5QjzzBa5EoLQKM8MVgpHi4jbHLf5PrPBBk6cG0T7KE/edit#gid=0)
