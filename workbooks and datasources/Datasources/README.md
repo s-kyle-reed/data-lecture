@@ -1,6 +1,6 @@
 # Datasources
 
-These are the datasources for each of the workbooks found [here](../workbooks%20and%20datasources)
+These are the datasources for each of the workbooks found [here](../)
 
 ## File Types
 
